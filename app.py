@@ -10,11 +10,14 @@ class InferlessPythonModel:
         USER: {}
         ASSISTANT: """
         snapshot_download(
-            "meta-llama/Llama-2-7b-chat-hf",
+            "TheBloke/Llama-2-7B-GPTQ",
             local_dir="/model",
             token="<<your_token>>",
         )
-        self.llm = LLM("/model")
+        self.llm = LLM(
+          model="/model",
+          quantization="gptq",
+          dtype="float16")
     
     def infer(self, inputs):
         print("inputs[questions] -->", inputs["questions"], flush=True)
