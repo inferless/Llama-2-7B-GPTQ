@@ -9,13 +9,8 @@ class InferlessPythonModel:
         self.template = """SYSTEM: You are a helpful assistant.
         USER: {}
         ASSISTANT: """
-        snapshot_download(
-            "TheBloke/Llama-2-7B-GPTQ",
-            local_dir="/model",
-            token="<<your_token>>",
-        )
         self.llm = LLM(
-          model="/model",
+          model="TheBloke/Llama-2-7B-GPTQ",
           quantization="gptq",
           dtype="float16")
     
