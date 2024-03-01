@@ -1,4 +1,9 @@
-# Llama 2 - 7b with vLLM
+# Llama-2-7B GPTQ with vLLM
+Llama-2-7B GPTQ is the 4-bit quantized version of the Llama-2-7B model in the Llama 2 family of large language models developed by Meta AI. This model has 7 billion parameters and was pretrained on 2 trillion tokens of data from publicly available sources. It has been fine-tuned on over one million human-annotated instruction datasets
+## Deploy Llama-2-7B GPTQ using Inferless:
+- Deployment of Llama-2-7B GPTQ model using [vLLM](https://github.com/vllm-project/vllm).
+- By using the vLLM, you can expect an average latency of 0.67 sec.
+
 vLLM is a fast and easy-to-use library for LLM inference and serving. You can use this template to use vLLM in Inferless.
 
 ---
